@@ -14,16 +14,13 @@
 # Saturday
 
 
-from calendar import MONDAY
+
 import datetime
 
-days = ['Monday', 'Tuesday', 'Wednesday',
-        'Thursday', 'Friday', 'Saturday', 'Sunday']
+days = ['Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday', 'Saturday', 'Sunday']
 
 input = list(input().split('#'))  # => ['31', '8', '2019']
 
-day = datetime.date(int(input[2]), int(input[1]),
-                    int(input[0]))  # => 2019-08-31
-
+day = datetime.date(int(input[2]), int(input[1]),int(input[0]))  # => 2019-08-31
 
 print(days[day.weekday()])
