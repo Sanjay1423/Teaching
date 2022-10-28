@@ -17,15 +17,10 @@ import datetime
 
 input = list(input().split('#'))  # => ['2019-06-29', '2019-06-30']
 
+day1 = datetime.datetime.strptime(input[0], "%Y-%m-%d")  # =>  2019-06-29 00:00:00
 
-day1 = datetime.datetime.strptime(
-    input[0], "%Y-%m-%d")  # =>  2019-06-29 00:00:00
-print(day1)
-
-day2 = datetime.datetime.strptime(
-    input[1], "%Y-%m-%d")  # =>  2019-06-30 00:00:00
+day2 = datetime.datetime.strptime(input[1], "%Y-%m-%d")  # =>  2019-06-30 00:00:00
 
 day = day2 - day1   # => 1 day, 0:00:00
-
 
 print(abs(day.days))
